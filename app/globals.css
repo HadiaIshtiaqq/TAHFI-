@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-manrope: 'Manrope', sans-serif;
+  --bg-ivory: #F7F3ED;
+  --text-obsidian: #171717;
+  --accent-taupe: #B4A69B;
+  --accent-rose: #B88C87;
+  --bg-beige: #E9E0D5;
+}
+
+body {
+  background-color: var(--bg-ivory);
+  color: var(--text-obsidian);
+  font-family: var(--font-manrope);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-serif-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F3ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #B4A69B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #171717;
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+  background: rgba(247, 243, 237, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(233, 224, 213, 0.6);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(233, 224, 213, 0.8);
+}
+
+/* Selection highlight */
+::selection {
+  background: #B88C87;
+  color: #FFFFFF;
+}
+
+/* Subtle image hover zoom */
+.image-zoom-container {
+  overflow: hidden;
+}
+.image-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.image-zoom-container:hover img {
+  transform: scale(1.05);
+}
